@@ -4,9 +4,6 @@ logs/
 postgres_data/
 venv/
 
-data/csv_files/*
-data/parquet_files/*
-
 *.pyc
 *.pyo
 *.pyd
