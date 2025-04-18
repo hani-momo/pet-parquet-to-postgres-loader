@@ -4,6 +4,12 @@ logs/
 postgres_data/
 venv/
 
+data/csv_files/*
+data/parquet_files/*
+
+!data/csv_files/.gitkeep
+!data/parquet_files/.gitkeep
+
 *.pyc
 *.pyo
 *.pyd
