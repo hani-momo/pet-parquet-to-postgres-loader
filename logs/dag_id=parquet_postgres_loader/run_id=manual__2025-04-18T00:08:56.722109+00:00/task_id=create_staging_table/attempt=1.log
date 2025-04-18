@@ -1,0 +1,88 @@
+[2025-04-18T00:13:59.294+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:13:59.309+0000] {__init__.py:51} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-04-18T00:13:59.325+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:13:59.330+0000] {base_task_runner.py:68} DEBUG - Planning to run as the  user
+[2025-04-18T00:13:59.335+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> from DB
+[2025-04-18T00:13:59.518+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:13:59.519+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-04-18T00:13:59.519+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.519+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-04-18T00:13:59.519+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-04-18T00:13:59.520+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]>
+[2025-04-18T00:13:59.523+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-04-18T00:13:59.524+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-04-18T00:13:59.525+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:13:59.525+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.525+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-04-18T00:13:59.527+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [queued]>
+[2025-04-18T00:13:59.527+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-04-18T00:13:59.539+0000] {taskinstance.py:1382} INFO - Executing <Task(SQLExecuteQueryOperator): create_staging_table> on 2025-04-18 00:08:56.722109+00:00
+[2025-04-18T00:13:59.543+0000] {standard_task_runner.py:57} INFO - Started process 288 to run task
+[2025-04-18T00:13:59.546+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'parquet_postgres_loader', 'create_staging_table', 'manual__2025-04-18T00:08:56.722109+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/parquet_to_postgres_dbt.py', '--cfg-path', '/tmp/tmp__qyp3fk']
+[2025-04-18T00:13:59.549+0000] {standard_task_runner.py:85} INFO - Job 50: Subtask create_staging_table
+[2025-04-18T00:13:59.550+0000] {cli_action_loggers.py:67} DEBUG - Calling callbacks: [<function default_action_log at 0xffff7ebe1af0>]
+[2025-04-18T00:13:59.599+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:13:59.602+0000] {task_command.py:416} INFO - Running <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [running]> on host d5013794fd50
+[2025-04-18T00:13:59.602+0000] {settings.py:351} DEBUG - Disposing DB connection pool (PID 288)
+[2025-04-18T00:13:59.603+0000] {settings.py:210} DEBUG - Setting up DB connection pool (PID 288)
+[2025-04-18T00:13:59.603+0000] {settings.py:283} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-04-18T00:13:59.605+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [running]> from DB
+[2025-04-18T00:13:59.642+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:13:59.643+0000] {taskinstance.py:925} DEBUG - Clearing XCom data
+[2025-04-18T00:13:59.650+0000] {retries.py:93} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-04-18T00:13:59.672+0000] {retries.py:93} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-04-18T00:13:59.684+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='parquet_postgres_loader' AIRFLOW_CTX_TASK_ID='create_staging_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T00:08:56.722109+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T00:08:56.722109+00:00'
+[2025-04-18T00:13:59.684+0000] {__init__.py:116} DEBUG - Preparing lineage inlets and outlets
+[2025-04-18T00:13:59.685+0000] {__init__.py:157} DEBUG - inlets: [], outlets: []
+[2025-04-18T00:13:59.685+0000] {sql.py:274} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS staging_table (
+        id INT,
+        name TEXT,
+        age INT
+    );
+    
+[2025-04-18T00:13:59.685+0000] {sql.py:147} DEBUG - Get connection for postgres_default
+[2025-04-18T00:13:59.695+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-04-18T00:13:59.696+0000] {providers_manager.py:366} DEBUG - Initializing Providers Manager[hooks]
+[2025-04-18T00:13:59.697+0000] {providers_manager.py:369} DEBUG - Initialization of Providers Manager[hooks] took 0.00 seconds
+[2025-04-18T00:13:59.698+0000] {sql.py:381} DEBUG - Executing following statements against DB: ['\n        CREATE TABLE IF NOT EXISTS staging_table (\n        id INT,\n        name TEXT,\n        age INT\n    );\n    ']
+[2025-04-18T00:13:59.707+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-04-18T00:13:59.712+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 280, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 155, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.18.0.2), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[2025-04-18T00:13:59.714+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [running]> from DB
+[2025-04-18T00:13:59.724+0000] {taskinstance.py:2430} DEBUG - Task Duration set to 0.203649
+[2025-04-18T00:13:59.724+0000] {taskinstance.py:1458} DEBUG - Clearing next_method and next_kwargs.
+[2025-04-18T00:13:59.725+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=parquet_postgres_loader, task_id=create_staging_table, execution_date=20250418T000856, start_date=20250418T001359, end_date=20250418T001359
+[2025-04-18T00:13:59.733+0000] {cli_action_loggers.py:85} DEBUG - Calling callbacks: []
+[2025-04-18T00:13:59.734+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 50 for task create_staging_table (connection to server at "postgres" (172.18.0.2), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+; 288)
+[2025-04-18T00:13:59.769+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-04-18T00:13:59.789+0000] {dagrun.py:734} DEBUG - number of tis tasks for <DagRun parquet_postgres_loader @ 2025-04-18 00:08:56.722109+00:00: manual__2025-04-18T00:08:56.722109+00:00, state:running, queued_at: 2025-04-18 00:08:56.760375+00:00. externally triggered: True>: 4 task(s)
+[2025-04-18T00:13:59.790+0000] {dagrun.py:755} DEBUG - number of scheduleable tasks for <DagRun parquet_postgres_loader @ 2025-04-18 00:08:56.722109+00:00: manual__2025-04-18T00:08:56.722109+00:00, state:running, queued_at: 2025-04-18 00:08:56.760375+00:00. externally triggered: True>: 4 task(s)
+[2025-04-18T00:13:59.790+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.convert_parquet_to_csv manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Trigger Rule' PASSED: False, Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'create_main_table'}
+[2025-04-18T00:13:59.791+0000] {taskinstance.py:1149} DEBUG - Dependencies not met for <TaskInstance: parquet_postgres_loader.convert_parquet_to_csv manual__2025-04-18T00:08:56.722109+00:00 [None]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'create_main_table'}
+[2025-04-18T00:13:59.791+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.convert_parquet_to_csv manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:13:59.791+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.convert_parquet_to_csv manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.791+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_main_table manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Trigger Rule' PASSED: False, Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'create_staging_table'}
+[2025-04-18T00:13:59.792+0000] {taskinstance.py:1149} DEBUG - Dependencies not met for <TaskInstance: parquet_postgres_loader.create_main_table manual__2025-04-18T00:08:56.722109+00:00 [None]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'create_staging_table'}
+[2025-04-18T00:13:59.792+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_main_table manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:13:59.792+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_main_table manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.792+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.load_csv_to_postgres manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Trigger Rule' PASSED: False, Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'convert_parquet_to_csv'}
+[2025-04-18T00:13:59.793+0000] {taskinstance.py:1149} DEBUG - Dependencies not met for <TaskInstance: parquet_postgres_loader.load_csv_to_postgres manual__2025-04-18T00:08:56.722109+00:00 [None]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'convert_parquet_to_csv'}
+[2025-04-18T00:13:59.793+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.load_csv_to_postgres manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:13:59.793+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.load_csv_to_postgres manual__2025-04-18T00:08:56.722109+00:00 [None]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.793+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [up_for_retry]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-04-18T00:13:59.794+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [up_for_retry]> dependency 'Not In Retry Period' PASSED: False, Task is not ready for retry yet but will be retried automatically. Current date is 2025-04-18T00:13:59.794054+00:00 and task will be retried at 2025-04-18T00:18:59.723987+00:00.
+[2025-04-18T00:13:59.794+0000] {taskinstance.py:1149} DEBUG - Dependencies not met for <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [up_for_retry]>, dependency 'Not In Retry Period' FAILED: Task is not ready for retry yet but will be retried automatically. Current date is 2025-04-18T00:13:59.794054+00:00 and task will be retried at 2025-04-18T00:18:59.723987+00:00.
+[2025-04-18T00:13:59.794+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_postgres_loader.create_staging_table manual__2025-04-18T00:08:56.722109+00:00 [up_for_retry]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:13:59.798+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

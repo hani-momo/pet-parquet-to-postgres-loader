@@ -1,0 +1,58 @@
+[2025-04-18T00:07:05.562+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:07:05.621+0000] {__init__.py:51} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-04-18T00:07:05.668+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:07:05.680+0000] {base_task_runner.py:68} DEBUG - Planning to run as the  user
+[2025-04-18T00:07:05.692+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> from DB
+[2025-04-18T00:07:06.123+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-04-18T00:07:06.123+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-04-18T00:07:06.136+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:07:06.136+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:07:06.137+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]>
+[2025-04-18T00:07:06.139+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-04-18T00:07:06.141+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-04-18T00:07:06.150+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-04-18T00:07:06.159+0000] {taskinstance.py:1168} DEBUG - <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-04-18T00:07:06.160+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [queued]>
+[2025-04-18T00:07:06.161+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-04-18T00:07:06.200+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_csv_to_postgres> on 2025-04-17 23:28:21.296730+00:00
+[2025-04-18T00:07:06.208+0000] {standard_task_runner.py:57} INFO - Started process 255 to run task
+[2025-04-18T00:07:06.224+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'parquet_loader', 'load_csv_to_postgres', 'manual__2025-04-17T23:28:21.296730+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/parquet_to_postgres_dbt.py', '--cfg-path', '/tmp/tmpytv0k1qt']
+[2025-04-18T00:07:06.229+0000] {standard_task_runner.py:85} INFO - Job 45: Subtask load_csv_to_postgres
+[2025-04-18T00:07:06.232+0000] {cli_action_loggers.py:67} DEBUG - Calling callbacks: [<function default_action_log at 0xffff90033af0>]
+[2025-04-18T00:07:06.462+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:07:06.470+0000] {task_command.py:416} INFO - Running <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [running]> on host 5c2de455146a
+[2025-04-18T00:07:06.471+0000] {settings.py:351} DEBUG - Disposing DB connection pool (PID 255)
+[2025-04-18T00:07:06.472+0000] {settings.py:210} DEBUG - Setting up DB connection pool (PID 255)
+[2025-04-18T00:07:06.473+0000] {settings.py:283} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-04-18T00:07:06.476+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [running]> from DB
+[2025-04-18T00:07:06.574+0000] {taskinstance.py:1094} DEBUG - previous_execution_date was called
+[2025-04-18T00:07:06.579+0000] {taskinstance.py:925} DEBUG - Clearing XCom data
+[2025-04-18T00:07:06.596+0000] {retries.py:93} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-04-18T00:07:06.688+0000] {retries.py:93} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-04-18T00:07:06.731+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='parquet_loader' AIRFLOW_CTX_TASK_ID='load_csv_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-04-17T23:28:21.296730+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-17T23:28:21.296730+00:00'
+[2025-04-18T00:07:06.733+0000] {__init__.py:116} DEBUG - Preparing lineage inlets and outlets
+[2025-04-18T00:07:06.734+0000] {__init__.py:157} DEBUG - inlets: [], outlets: []
+[2025-04-18T00:07:06.761+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/parquet_to_postgres_dbt.py", line 45, in load_csv_to_postgres
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "staging_table" does not exist
+LINE 2: ...              CREATE TEMP TABLE temp_import (LIKE staging_ta...
+                                                             ^
+
+[2025-04-18T00:07:06.764+0000] {taskinstance.py:844} DEBUG - Refreshing TaskInstance <TaskInstance: parquet_loader.load_csv_to_postgres manual__2025-04-17T23:28:21.296730+00:00 [running]> from DB
+[2025-04-18T00:07:06.965+0000] {taskinstance.py:2430} DEBUG - Task Duration set to 0.827495
+[2025-04-18T00:07:06.975+0000] {taskinstance.py:1458} DEBUG - Clearing next_method and next_kwargs.
+[2025-04-18T00:07:06.989+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=parquet_loader, task_id=load_csv_to_postgres, execution_date=20250417T232821, start_date=20250418T000706, end_date=20250418T000706
+[2025-04-18T00:07:07.115+0000] {cli_action_loggers.py:85} DEBUG - Calling callbacks: []
+[2025-04-18T00:07:07.120+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 45 for task load_csv_to_postgres (relation "staging_table" does not exist
+LINE 2: ...              CREATE TEMP TABLE temp_import (LIKE staging_ta...
+                                                             ^
+; 255)
+[2025-04-18T00:07:07.201+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-04-18T00:07:07.325+0000] {dagrun.py:734} DEBUG - number of tis tasks for <DagRun parquet_loader @ 2025-04-17 23:28:21.296730+00:00: manual__2025-04-17T23:28:21.296730+00:00, state:running, queued_at: 2025-04-17 23:28:21.318193+00:00. externally triggered: True>: 0 task(s)
+[2025-04-18T00:07:07.326+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
